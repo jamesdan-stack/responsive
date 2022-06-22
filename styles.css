@@ -52,15 +52,44 @@ h5 {
 
 .head{
     background-color: hsl(248, 32%, 49%);
+    
 
 }
 
-input[type=text],
-input[type=password] {
-    display: inline-block;
-    box-sizing: border-box;
+input{
+    border-radius: 5px;
+    border: 1px solid hsl(246, 25%, 77%);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 15px 25px;
+    display: block;
     width: 100%;
-    padding: 12px 20px;
 }
 
-https://github.com/jamesdan-stack/zuri.git
+
+input:focus{
+    border: 2px solid hsl(248, 32%, 49%);
+}
+
+button {
+    background-color: hsl(154, 59%, 51%);
+    border-radius: 5px;
+    border: 1px solid hsl(154, 59%, 45%);
+    box-shadow: 0 2px hsl(154, 59%, 45%);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 15px 25px;
+    display: block;
+    width: 100%;
+
+}
+
+button:focus{
+    outline: none;
+}
+
+button:active{
+    box-shadow: 0 0 hsl(154, 59%, 45%);
+}
+
