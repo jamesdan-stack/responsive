@@ -37,7 +37,8 @@ p{
     opacity: 0.8;
 }
 
-h5 {
+.right h5 {
+    margin: 0;
     font-size: 16px;
     opacity: 0.8;
 }
@@ -48,14 +49,28 @@ h5 {
     border-radius: 5px;
     box-shadow: 0 6px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .head{
     background-color: hsl(248, 32%, 49%);
-    
-
+    padding: 20px;
 }
 
+.form-control small{
+    color: hsl(0,100%, 74%);
+    font-weight: 600;
+    position: absolute;
+    bottom: -24px;
+    right: 0;
+    opacity: 0;
+    text-align: right;
+}
+
+.form-control{
+    position: relative;
+    margin-bottom: 30px;
+}
 input{
     border-radius: 5px;
     border: 1px solid hsl(246, 25%, 77%);
@@ -69,6 +84,27 @@ input{
 
 input:focus{
     border: 2px solid hsl(248, 32%, 49%);
+    outline: none;
+}
+
+/*.form-control input{
+}*/
+
+.form-control.error input::placeholder{
+    color: hsl(0,100%, 74%);
+}
+
+.form-control img{
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    height: 20px;
+    transform: translateY(-50%);
+}
+
+.form-control.error img{
+    opacity: 1;
 }
 
 button {
@@ -82,6 +118,9 @@ button {
     padding: 15px 25px;
     display: block;
     width: 100%;
+    border-bottom-width: 4px;
+    cursor: pointer;
+    letter-spacing: 1px;
 
 }
 
@@ -91,5 +130,45 @@ button:focus{
 
 button:active{
     box-shadow: 0 0 hsl(154, 59%, 45%);
+    transform: translateY(2px);
+}
+    
+
+
+small{
+    margin-top: 15px;
+    display: block;
+    color: #bbb;
+    font-size: 10px;
+    font-weight: 500;
+
 }
 
+small a{
+    color: hsl(0,100%, 74%);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.form-control small{
+    opacity: 0;
+}
+
+.form-control.error small{
+    opacity: 1;
+}
+
+
+@media screen and (max-width: 768px) {
+    h1{
+        text-align: center;
+
+    }
+    p{
+        text-align: center;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+}
